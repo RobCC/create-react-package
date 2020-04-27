@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": false,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "baseUrl": ".",
+    "paths": {
+      "#/*": ["./src/*"],
+      "~/*": ["./*"]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "rollup.config.js",
+    "node_modules",
+    "build",
+    "dist"
+  ]
+}

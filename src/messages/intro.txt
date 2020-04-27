@@ -1,0 +1,2 @@
+This utility will walk you through creating a package template.
+It will try to guess sensible defaults.
