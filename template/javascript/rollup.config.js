@@ -15,7 +15,7 @@ const jsExtensions = ['.js', '.jsx'];
 const styleExtensions = ['.css', '.sass', '.scss'];
 
 export default {
-  input: 'src/index.tsx',
+  input: 'src/index.js',
   output: [
     {
       file: pkg.main,
@@ -39,17 +39,19 @@ export default {
           resolve({ code: result.css.toString() });
         }),
       autoModules: true,
-      styleExtensions,
+      extensions: styleExtensions,
       plugins: [autoprefixer],
     }),
     url(),
     svgr(),
-    resolve({ jsExtensions }),
-    commonjs(),
-    terser(),
+    resolve({
+      extensions: jsExtensions,
+    }),
     babel({
-      jsExtensions,
+      extensions: jsExtensions,
       exclude: 'node_modules/**',
     }),
+    commonjs(),
+    terser(),
   ],
 };

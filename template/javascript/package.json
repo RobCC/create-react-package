@@ -26,7 +26,9 @@
     "predeploy:pages": "cd example && {{manager}} run install && {{manager}} run build",
     "deploy:pages": "gh-pages -d example/build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  },
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"

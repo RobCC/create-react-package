@@ -1,9 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './styles.module.scss';
 
-export const App = () => (
+export const Component = (props) => (
   <div className={styles.div}>
-    <span className={styles.span}>Hello World</span>
+    <span className={styles.span}>{props.msg}</span>
   </div>
 );
+
+Component.propTypes = {
+  msg: PropTypes.string,
+};
