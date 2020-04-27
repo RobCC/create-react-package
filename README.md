@@ -2,11 +2,10 @@
 
 ## TODO
 
-- Test templates
-- Make index (node) executable
 - Add testing libraries
 - Config rollup options
 - init git?
+- Add license to package json (https://docs.npmjs.com/files/package.json)
 - CI
 
 
