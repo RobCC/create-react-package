@@ -35,7 +35,7 @@ module.exports = async function() {
       await installDependencies(answers.manager, destRootPath);
     });
     await startOperation("Installing example's dependencies", async () => {
-      await installDependencies(answers.manager, destRootPath);
+      await installExampleDependencies(answers.manager, destRootPath);
     });
   }
 

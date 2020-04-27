@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "source": "src/index.tsx",
   "author": "{{author}}",
   "repository": "{{repository}}",
