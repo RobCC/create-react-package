@@ -40,20 +40,22 @@ export default {
           resolve({ code: result.css.toString() });
         }),
       autoModules: true,
-      styleExtensions,
+      extensions: styleExtensions,
       plugins: [autoprefixer],
     }),
     url(),
     svgr(),
-    resolve({ jsExtensions }),
+    resolve({
+      extensions: jsExtensions,
+    }),
     typescript({
       clean: true,
     }),
-    commonjs(),
-    terser(),
     babel({
-      jsExtensions,
+      extensions: jsExtensions,
       exclude: 'node_modules/**',
     }),
+    commonjs(),
+    terser(),
   ],
 };
