@@ -8,7 +8,6 @@ async function installDependencies(manager, destRootPath) {
 }
 
 async function installExampleDependencies(manager, destRootPath) {
-  const spinner = getSpinner();
   const examplePath = path.join(destRootPath, 'example');
 
   await execa(manager, ['install'], { cwd: examplePath });
