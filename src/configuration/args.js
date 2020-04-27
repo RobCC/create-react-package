@@ -4,7 +4,7 @@ module.exports = async () => {
   program
     .name('create-react-package')
     .usage('[options]')
-    .option('-t, --template <template>', 'template to be used (javascript or typescript)', 'typescript')
+    .option('-t, --template <template>', 'template to be used (javascript or typescript)', '')
     .option('-n, --name <name>', 'package name', '')
     .option('-d, --description <description>', 'package description', '')
     .option('-a, --author <author>', 'package author', '')
