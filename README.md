@@ -1,4 +1,4 @@
-# create-react-package
+# create-react-package-lib
 > An environment generator to publish React packages to npm
 
 ## Features
@@ -15,13 +15,13 @@
 ### Globally
 
 ```bash
-npm install -g create-react-package
+npm install -g create-react-package-lib
 ```
 
 ### With npx
 
 ```bash
-npx create-react-package
+npx create-react-package-lib
 ```
 
 

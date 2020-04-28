@@ -2,7 +2,7 @@ const { program } = require('commander');
 
 module.exports = async () => {
   program
-    .name('create-react-package')
+    .name('create-react-package-lib')
     .usage('[options]')
     .option('-t, --template <template>', 'template to be used (javascript or typescript)', '')
     .option('-n, --name <name>', 'package name', '')
