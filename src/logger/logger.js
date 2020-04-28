@@ -6,6 +6,8 @@ const FILES = {
   intro: 'intro.txt',
 }
 
+let isDebugEnabled;
+
 function getMessage(file) {
   return path.join(__dirname, '..', 'messages', file);
 }
@@ -31,6 +33,26 @@ function printEndMessage(text) {
   console.log(chalk.cyan.bold(`\n${text}`));
 }
 
+function setDebug(isDebug) {
+  isDebugEnabled = isDebug;
+}
+
+function debug(...args) {
+  if (isDebugEnabled) {
+    console.log('[LOG] ', ...args);
+  }
+}
+
 module.exports.printEndMessage = printEndMessage;
 module.exports.printIntro = printIntro;
 module.exports.printInstructions = printInstructions;
+module.exports.setDebug = setDebug;
+module.exports.debug = debug;
+
+module.exports = {
+  printEndMessage : printEndMessage,
+  printIntro : printIntro,
+  printInstructions : printInstructions,
+  setDebug : setDebug,
+  debug : debug,
+};

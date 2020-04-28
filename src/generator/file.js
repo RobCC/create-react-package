@@ -3,6 +3,8 @@ const path = require('path');
 const makeDir = require('make-dir');
 const handlebars = require('handlebars');
 
+const { debug } = require('../logger/logger');
+
 const FORMAT = 'utf8';
 const specialFormats = [
   'ico',
@@ -42,6 +44,12 @@ function copyFile({ file, templatePath, destRootPath, answers }) {
   const fileRelPath = path.relative(templatePath, file);
   const destPath = path.join(destRootPath, fileRelPath);
   const destFileDir = path.parse(destPath).dir;
+
+  debug('-------------------------------------------------');
+  debug('File full path: ', file);
+  debug('Template path: ', templatePath);
+  debug(`Copying file "${fileRelPath}" to "${destPath}"`);
+  debug('Creating dir: ', destFileDir);
 
   makeDir.sync(destFileDir);
 
