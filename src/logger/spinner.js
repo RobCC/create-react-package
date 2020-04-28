@@ -6,7 +6,7 @@ let spinner;
 
 function initSpinner() {
   spinner = ora({
-    spinner: spinners.pong,
+    spinner: spinners.dots,
   });
 
   return spinner;
