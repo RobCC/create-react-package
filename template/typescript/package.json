@@ -25,6 +25,7 @@
   ],
   "scripts": {
     "build": "rollup -c",
+    "watch": "rollup -c --watch",
     "predeploy:pages": "cd example && {{manager}} run install && {{manager}} run build",
     "deploy:pages": "gh-pages -d example/build"
   },

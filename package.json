@@ -1,6 +1,6 @@
 {
   "name": "create-react-package",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "An environment generator to publish React packages to npm",
   "main": "index.js",
   "scripts": {
