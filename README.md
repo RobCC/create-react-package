@@ -3,6 +3,11 @@
 ## TODO
 
 - Add testing libraries
+  Choose between react-test-renderer, enzyme, or no test
+    react-test-renderer
+    enzyme
+    babel-jest
+    jest
 - Config rollup options
 - Add node testing
 - init git?

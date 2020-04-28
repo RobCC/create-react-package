@@ -85,6 +85,18 @@ async function getAnswers(args) {
     when: args.manager === '',
   };
 
+  const testLibraries = {
+    type: 'checkbox',
+    name: 'testLibraries',
+    message: 'What testing libraries do you want to include?',
+    choices: [
+      'jest',
+      'enzyme',
+      'react-test-renderer',
+    ],
+    default: [],
+  }
+
   const installDependencies = {
     type: 'confirm',
     name: 'install',
@@ -102,6 +114,7 @@ async function getAnswers(args) {
     keywords,
     license,
     packageManager,
+    testLibraries,
     installDependencies,
   ]);
 
