@@ -4,8 +4,8 @@
 
 - Add testing libraries
 - Config rollup options
+- Add node testing
 - init git?
-- Add license to package json (https://docs.npmjs.com/files/package.json)
 - CI
 
 

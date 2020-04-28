@@ -9,6 +9,7 @@
   "author": "{{author}}",
   "repository": "{{repository}}",
   "license": "{{license}}",
+  "bugs": "https://github.com/{{author}}/{{name}}/issues",
   "keywords": [
   {{#each keywords}}
     {{#if @last}}
