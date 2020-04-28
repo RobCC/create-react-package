@@ -1,6 +1,5 @@
 const path = require('path');
 const globby = require('globby');
-const unixify = require('unixify');
 const makeDir = require('make-dir');
 
 const { copyFile } = require('./file');
