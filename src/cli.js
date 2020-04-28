@@ -26,6 +26,7 @@ module.exports = async function() {
 
   logger.debug('Destination root path', destRootPath);
   logger.debug('Template path', templatePath);
+  logger.debug('Files to copy', files);
 
   await startOperation('Copying files', () => {
     copyFiles({ templatePath, destRootPath, files, answers })
