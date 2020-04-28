@@ -2,11 +2,7 @@
 const getArgs = require('./configuration/args');
 const { getAnswers } = require('./configuration/answers');
 const { startOperation } = require('./logger/spinner');
-const {
-  printIntro,
-  printInstructions,
-  printEndMessage,
-} = require('./logger/logger');
+const logger = require('./logger/logger');
 const {
   createDestFolder,
   getTemplateFiles,
@@ -18,13 +14,18 @@ const {
 } = require('./generator/process');
 
 module.exports = async function() {
-  printIntro();
+  logger.printIntro();
 
   const args = await getArgs();
   const answers = await getAnswers(args);
 
+  logger.setDebug(args.debug)
+
   const destRootPath = createDestFolder(answers.name);
   const [templatePath, files] = getTemplateFiles(answers.template);
+
+  logger.debug('Destination root path', destRootPath);
+  logger.debug('Template path', templatePath);
 
   await startOperation('Copying files', () => {
     copyFiles({ templatePath, destRootPath, files, answers })
@@ -39,8 +40,8 @@ module.exports = async function() {
     });
   }
 
-  printInstructions(answers.name, answers.manager);
-  printEndMessage('Happy coding!');
+  logger.printInstructions(answers.name, answers.manager);
+  logger.printEndMessage('Happy coding!');
   process.exit(0);
 }
 
