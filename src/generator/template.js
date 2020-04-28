@@ -18,9 +18,7 @@ function createDestFolder(name) {
 }
 
 function getTemplateFiles(template) {
-  const templatePath = unixify(
-    path.join(__dirname, '../..', 'template', template)
-  );
+  const templatePath = path.join(__dirname, '../..', 'template', template).replace(/\\/g, '/')
 
   return [
     templatePath,
