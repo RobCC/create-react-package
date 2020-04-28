@@ -3,6 +3,8 @@ const path = require('path');
 const makeDir = require('make-dir');
 const handlebars = require('handlebars');
 
+require('./helpers');
+
 const FORMAT = 'utf8';
 const specialFormats = [
   'ico',

@@ -102,8 +102,8 @@ async function getAnswers(args) {
     default: [],
     filter: libs => ({
       jest: libs.indexOf('jest') > -1,
-      enzyme: libs.indexOf('jest') > -1,
-      reactRenderer: libs.indexOf('jest') > -1,
+      enzyme: libs.indexOf('enzyme') > -1,
+      reactRenderer: libs.indexOf('react-test-renderer') > -1,
     })
   }
 
