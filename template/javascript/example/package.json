@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "react": "{{#if isNpm}}file:..{{else}}link:..{{/if}}/node_modules/react",
-    "react-dom": "{{#if isNpm}}file:..{{else}}link:..{{/if}}/node_modules/react-dom",
-    "{{name}}": "{{#if isNpm}}file:..{{else}}link:..{{/if}}"
+    "react": "{{#if manager.[isNpm]}}file:..{{else}}link:..{{/if}}/node_modules/react",
+    "react-dom": "{{#if manager.[isNpm]}}file:..{{else}}link:..{{/if}}/node_modules/react-dom",
+    "{{name}}": "{{#if manager.[isNpm]}}file:..{{else}}link:..{{/if}}"
   },
   "devDependencies": {
     "react-scripts": "^3.4.1"

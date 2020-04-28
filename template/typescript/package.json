@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "predeploy:pages": "cd example && {{manager}} run install && {{manager}} run build",
+    "predeploy:pages": "cd example && {{manager.[type]}} run install && {{manager.[type]}} run build",
     "deploy:pages": "gh-pages -d example/build"
   },
   "dependencies": {},

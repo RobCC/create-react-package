@@ -83,6 +83,11 @@ async function getAnswers(args) {
     message: 'Package Manager:',
     choices: getAvailableManagers,
     when: args.manager === '',
+    filter: manager => ({
+      type: manager,
+      isNpm: manager === 'npm',
+      isYarn: manager === 'yarn',
+    }),
   };
 
   const testLibraries = {
@@ -95,6 +100,11 @@ async function getAnswers(args) {
       'react-test-renderer',
     ],
     default: [],
+    filter: libs => ({
+      jest: libs.indexOf('jest') > -1,
+      enzyme: libs.indexOf('jest') > -1,
+      reactRenderer: libs.indexOf('jest') > -1,
+    })
   }
 
   const installDependencies = {

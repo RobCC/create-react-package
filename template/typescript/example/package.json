@@ -4,15 +4,15 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "react": "{{#if isNpm}}file:..{{else}}link:..{{/if}}/node_modules/react",
-    "react-dom": "{{#if isNpm}}file:..{{else}}link:..{{/if}}/node_modules/react-dom",
-    "{{name}}": "{{#if isNpm}}file:..{{else}}link:..{{/if}}"
+    "react": "{{#if manager.[isNpm]}}file:..{{else}}link:..{{/if}}/node_modules/react",
+    "react-dom": "{{#if manager.[isNpm]}}file:..{{else}}link:..{{/if}}/node_modules/react-dom",
+    "{{name}}": "{{#if manager.[isNpm]}}file:..{{else}}link:..{{/if}}"
   },
   "devDependencies": {
-    "@types/jest": "{{#if isNpm}}file:..{{else}}link:..{{/if}}/node_modules/@types/jest",
-    "@types/react": "{{#if isNpm}}file:..{{else}}link:..{{/if}}/node_modules/@types/react",
-    "@types/react-dom": "{{#if isNpm}}file:..{{else}}link:..{{/if}}/node_modules/@types/react-dom",
-    "typescript": "{{#if isNpm}}file:..{{else}}link:..{{/if}}/node_modules/typescript",
+    "@types/jest": "{{#if manager.[isNpm]}}file:..{{else}}link:..{{/if}}/node_modules/@types/jest",
+    "@types/react": "{{#if manager.[isNpm]}}file:..{{else}}link:..{{/if}}/node_modules/@types/react",
+    "@types/react-dom": "{{#if manager.[isNpm]}}file:..{{else}}link:..{{/if}}/node_modules/@types/react-dom",
+    "typescript": "{{#if manager.[isNpm]}}file:..{{else}}link:..{{/if}}/node_modules/typescript",
     "react-scripts": "^3.4.1"
   },
   "scripts": {
